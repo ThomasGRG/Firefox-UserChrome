@@ -57,18 +57,21 @@
 #main-window[inFullscreen] #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
     position: relative !important;
     overflow: hidden !important;
+    transition: all 200ms ease 400ms !important;
     min-width: 5px !important;
     max-width: 5px !important;
-    transition: all 0.2s ease 400ms !important;
-    z-index: 2;
+    z-index: 3;
 }
 
-#main-window[inFullscreen] #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover,
+#main-window[inFullscreen] #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover {
+    transition: all 200ms ease 0ms !important;
+    min-width: 350px !important;
+    max-width: 350px !important;
+    margin-right: -345px !important;
+    /* 350 - 5 = 345 * -1 = -345*/
+}
+
 #main-window[inFullscreen] #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar {
-    transition: all 0.2s ease 0ms !important;
-    min-width: 280px !important;
-    max-width: 280px !important;
-    margin-right: -275px !important;
-    /* 280 - 5 = 275 * -1 = -275*/
+    min-width: 350px !important;
     z-index: 1;
 }
